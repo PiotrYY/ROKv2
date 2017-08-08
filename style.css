@@ -1,0 +1,309 @@
+@font-face {
+    font-family:"BlairCaps";
+    src: url("BlairCaps.ttf") /* TTF file for CSS3 browsers */
+}
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+.intro {
+  width: 100%;
+  height: 100vh;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+h1{
+	/*font-family: 'Blair Caps', sans-serif;*/
+	text-transform: uppercase;
+}
+
+/*SLUZBA ANIMATIONS*/
+.cisza, .obecnosc, .sluzba{
+	font-size: 3em;
+	color: #fff;
+	z-index: 10;
+  animation-duration: 4s;
+	-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+	animation-iteration-count: 1;
+	-webkit-iteration-count: 1;
+	position: absolute;
+	left:50%;
+	top:100%;
+
+}
+
+.sluzba{
+    -webkit-animation-name: sluzba; /* Safari 4.0 - 8.0 */
+    animation-name: sluzba;
+		animation-delay: 6s;
+}
+
+@-webkit-keyframes sluzba {
+  0%   {opacity:1; top:100%;}
+  75%  {opacity:1; top:50%;}
+  100% {opacity: 0; top:50%;}
+}
+
+@keyframes sluzba {
+  0%   {opacity:1; top:100%;}
+  75%  {opacity:1; top:50%;}
+  100% {opacity: 0; top:50%;}
+}
+
+
+
+/*OBECNOSC ANIMATIONS*/
+.obecnosc{
+	  -webkit-animation-name:becnosc;
+    animation-name: obecnosc;
+		animation-delay: 2s;
+}
+
+@-webkit-keyframes obecnosc {
+  0%   {opacity:1; top:100%;}
+  75%  {opacity:1; top:50%;}
+  100% {opacity: 0; top:50%;}
+}
+
+@keyframes obecnosc {
+   0%   {opacity:1; top:100%;}
+   75%  {opacity:1; top:50%;}
+   100% {opacity: 0; top:50%;}
+}
+
+/*CISZA ANIMATIONS*/
+.cisza{
+    -webkit-animation-name: cisza; /* Safari 4.0 - 8.0 */
+    animation-name: cisza;
+}
+
+@-webkit-keyframes cisza {
+    0%   {opacity:1; top:100%;}
+	  75%  {opacity:1; top:50%;}
+	  100% {opacity: 0; top:50%;}
+}
+
+@keyframes cisza {
+  0%   {opacity:1; top:100%;}
+  75%  {opacity:1; top:50%;}
+  100% {opacity: 0; top:50%;}
+}
+
+
+
+.intro h1 {
+  font-family: 'Blair Caps', sans-serif;
+  font-size: 48px;
+  color: #fff;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #222;
+  display: none;
+}
+
+.load {
+	  float: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+		z-index: 9;
+}
+.logo{
+	width: 150px;
+	height: 150px;
+	position: relative;
+	right: 1%;
+  -webkit-animation-name: logo-opacity; /* Safari 4.0 - 8.0 */
+  animation-name: logo-opacity;
+  -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+  animation-iteration-count: 1;
+  -webkit-iteration-count: 1;
+
+  -webkit-animation-name: logo-mymove; /* Safari 4.0 - 8.0 */
+  animation-name: logo-mymove;
+  -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+  animation-iteration-count: infinite;
+  -webkit-iteration-count: infinite;
+}
+
+@-webkit-keyframes logo-opacity {
+    0%   {opacity:0;}
+	  100% {opacity:1;}
+}
+
+@keyframes logo-opacity {
+     0%   {opacity:0;}
+ 	  100% {opacity:1;}
+}
+
+@-webkit-keyframes logo-mymove {
+    0%   {top: 300px;}
+    25%  {top: 200px;}
+    75%  {top: 250px}
+    100% {top: 0px;}
+}
+
+/* Standard syntax */
+@keyframes logo-mymove {
+   0%   {top: 30px;}
+   25%  {top: 200px;}
+   75%  {top: 250px}
+   100% {top: 0px;}
+  }
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+    background-size: cover;
+    -webkit-animation-name: video; /* Safari 4.0 - 8.0 */
+    animation-name: video;
+   	-webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+   	animation-iteration-count: 1;
+   	-webkit-iteration-count: 1;
+}
+@keyframes video {
+  0%   {opacity:0;}
+  50%   {opacity:0;}
+  100% {opacity:1;}
+}
+.overlay {
+  background-color:#ccc;
+  bottom: 0;
+  left: 0;
+  opacity: 0.8;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 5;
+}
+
+.left{
+	position: relative;
+	left:0;
+	top:1%;
+	width:49%;
+	height: 100%;
+	display: inline-block;
+	margin: 0;
+}
+.right{
+	position: absolute;
+	left:50%;
+	top:1%;
+	width: 49%;
+	height: 100%;
+  display: inline-block;
+	margin: 0;
+}
+
+.right, .left h1{
+	color:#fff;
+	font-size: 1.5rem;
+
+}
+
+.left h1{
+	position: absolute;
+	left:25%;
+	top:65%;
+	z-index: 9;
+	cursor: pointer;
+	padding: 100px;
+}
+.right h1{
+	position: absolute;
+	right:25%;
+	top:65%;
+	z-index: 9;
+	cursor: pointer;
+	padding: 100px;
+}
+
+.left:hover{
+	background-color: rgba(100,100,0,0.3);
+	transition: 2s;
+	z-index: 5;
+}
+.right:hover{
+	background-color: rgba(100,100,0,0.3);
+	transition: 2s;
+	z-index: 5;
+}
+
+
+.js .load, .js #loader-wrapper {
+  display: block;
+}
