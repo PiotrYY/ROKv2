@@ -178,6 +178,7 @@ h1{
 	height: 150px;
 	position: relative;
 	right: 1%;
+
   -webkit-animation-name: logo-opacity; /* Safari 4.0 - 8.0 */
   animation-name: logo-opacity;
   -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
@@ -202,19 +203,17 @@ h1{
 }
 
 @-webkit-keyframes logo-mymove {
-    0%   {top: 300px;}
-    25%  {top: 200px;}
-    75%  {top: 250px}
-    100% {top: 0px;}
+    0%   {top: 0px;}
+    40% {top: 50px;}
+    100%   {top: 0px;}
 }
 
 /* Standard syntax */
 @keyframes logo-mymove {
-   0%   {top: 30px;}
-   25%  {top: 200px;}
-   75%  {top: 250px}
-   100% {top: 0px;}
-  }
+      0%   {top: 0px;}
+      40% {top: 50px;}
+      100%   {top: 0px;}
+}
 
 video {
     position: fixed;
@@ -234,6 +233,12 @@ video {
    	animation-iteration-count: 1;
    	-webkit-iteration-count: 1;
 }
+@-webkit-keyframes video {
+  0%   {opacity:0;}
+  50%   {opacity:0;}
+  100% {opacity:1;}
+}
+
 @keyframes video {
   0%   {opacity:0;}
   50%   {opacity:0;}
