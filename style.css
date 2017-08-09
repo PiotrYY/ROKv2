@@ -1,8 +1,5 @@
-@font-face {
-    font-family:"BlairCaps";
-    src: url("BlairCaps.ttf") /* TTF file for CSS3 browsers */
-}
 
+@import url('https://fonts.googleapis.com/css?family=Alegreya&subset=latin-ext');
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -64,87 +61,91 @@ table {
   position: relative;
 }
 h1{
-	/*font-family: 'Blair Caps', sans-serif;*/
+	font-family: 'Alegreya', serif;
 	text-transform: uppercase;
 }
 
+
+
 /*SLUZBA ANIMATIONS*/
-.cisza, .obecnosc, .sluzba{
-	font-size: 3em;
-	color: #fff;
+.sentens{
+	font-size: 2em;
+	color: #FFCBAF;
 	z-index: 10;
-  animation-duration: 4s;
-	-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-	animation-iteration-count: 1;
-	-webkit-iteration-count: 1;
-	position: absolute;
-	left:50%;
-	top:100%;
-
+	position: relative;
+  top:58%;
+	width:300px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
-.sluzba{
-    -webkit-animation-name: sluzba; /* Safari 4.0 - 8.0 */
-    animation-name: sluzba;
-		animation-delay: 6s;
-}
-
-@-webkit-keyframes sluzba {
-  0%   {opacity:1; top:100%;}
-  75%  {opacity:1; top:50%;}
-  100% {opacity: 0; top:50%;}
-}
-
-@keyframes sluzba {
-  0%   {opacity:1; top:100%;}
-  75%  {opacity:1; top:50%;}
-  100% {opacity: 0; top:50%;}
-}
-
-
-
-/*OBECNOSC ANIMATIONS*/
-.obecnosc{
-	  -webkit-animation-name:becnosc;
-    animation-name: obecnosc;
-		animation-delay: 2s;
-}
-
-@-webkit-keyframes obecnosc {
-  0%   {opacity:1; top:100%;}
-  75%  {opacity:1; top:50%;}
-  100% {opacity: 0; top:50%;}
-}
-
-@keyframes obecnosc {
-   0%   {opacity:1; top:100%;}
-   75%  {opacity:1; top:50%;}
-   100% {opacity: 0; top:50%;}
-}
-
-/*CISZA ANIMATIONS*/
 .cisza{
-    -webkit-animation-name: cisza; /* Safari 4.0 - 8.0 */
-    animation-name: cisza;
+  animation-delay: 4s;
+  animation-name: cisza;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  opacity: 0;
 }
 
 @-webkit-keyframes cisza {
-    0%   {opacity:1; top:100%;}
-	  75%  {opacity:1; top:50%;}
-	  100% {opacity: 0; top:50%;}
+    0%   {opacity:0; top:100%;}
+	  50% {opacity:0.6; top:50%;}
+    100% {opacity:0; top:50%;}
 }
 
 @keyframes cisza {
-  0%   {opacity:1; top:100%;}
-  75%  {opacity:1; top:50%;}
-  100% {opacity: 0; top:50%;}
+  0%   {opacity:0; top:100%;}
+  50% {opacity:0.6; top:50%;}
+  100% {opacity:0; top:50%;}
 }
+
+.obecnosc{
+  animation-delay: 5s;
+  animation-name: obecnosc;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  opacity: 0;
+}
+
+@-webkit-keyframes obecnosc {
+    0%   {opacity:0; top:100%;}
+	  50% {opacity:0.6; top:50%;}
+    100% {opacity:0; top:50%;}
+}
+
+@keyframes obecnosc {
+  0%   {opacity:0; top:100%;}
+  50% {opacity:0.6; top:50%;}
+  100% {opacity:0; top:50%;}
+}
+
+.sluzba{
+  animation-delay: 6s;
+  animation-name: sluzba;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  opacity: 0;
+}
+
+@-webkit-keyframes sluzba {
+    0%   {opacity:0; top:100%;}
+	  50% {opacity:0.6; top:50%;}
+    100% {opacity:0; top:50%;}
+}
+
+@keyframes sluzba {
+  0%   {opacity:0; top:100%;}
+  50% {opacity:0.6; top:50%;}
+  100% {opacity:0; top:50%;}
+}
+
 
 
 
 .intro h1 {
-  font-family: 'Blair Caps', sans-serif;
-  font-size: 48px;
+  font-family: 'Alegreya', serif;
+  font-size: 3em;
   color: #fff;
   text-transform: uppercase;
   position: absolute;
@@ -178,41 +179,72 @@ h1{
 	height: 150px;
 	position: relative;
 	right: 1%;
+	border-radius: 50%;
 
-  -webkit-animation-name: logo-opacity; /* Safari 4.0 - 8.0 */
-  animation-name: logo-opacity;
-  -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+-webkit-box-shadow: 9px 2px 300px 50px rgba(167,179,75,1);
+-moz-box-shadow: 9px 2px 300px 50px rgba(167,179,75,1);
+box-shadow: 9px 2px 300px 50px rgba(167,179,75,1);
+
+
+  -webkit-animation-name: logo-mymove ; /* Safari 4.0 - 8.0 */
+  animation-name: logo-mymove;
+  -webkit-animation-duration: 10s; /* Safari 4.0 - 8.0 */
   animation-iteration-count: 1;
   -webkit-iteration-count: 1;
 
-  -webkit-animation-name: logo-mymove; /* Safari 4.0 - 8.0 */
-  animation-name: logo-mymove;
-  -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
-  animation-iteration-count: infinite;
-  -webkit-iteration-count: infinite;
-}
-
-@-webkit-keyframes logo-opacity {
-    0%   {opacity:0;}
-	  100% {opacity:1;}
-}
-
-@keyframes logo-opacity {
-     0%   {opacity:0;}
- 	  100% {opacity:1;}
 }
 
 @-webkit-keyframes logo-mymove {
-    0%   {top: 0px;}
-    40% {top: 50px;}
-    100%   {top: 0px;}
+  0%   {opacity:0;}
+  60% {opacity:0.2;}
+  100%   {opacity:1;}
 }
 
 /* Standard syntax */
 @keyframes logo-mymove {
-      0%   {top: 0px;}
-      40% {top: 50px;}
-      100%   {top: 0px;}
+      0%   {opacity:0;}
+      60% {opacity:0.2;}
+      100%   {opacity:1;}
+}
+
+#cross_inside{
+  -webkit-animation-name: cross_inside; /* Safari 4.0 - 8.0 */
+  animation-name: cross_inside;
+  -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+  animation-iteration-count: infinite;
+  -webkit-iteration-count: infinite;
+  opacity: 0.3;
+}
+@-webkit-keyframes cross_inside {
+    0%   {opacity:0.2;}
+    50%   {opacity:1;}
+	  100% {opacity:0.2;}
+}
+
+@keyframes cross_inside {
+  0%   {opacity:0.2;}
+  50%   {opacity:1;}
+  100% {opacity:0.2;}
+}
+
+#cross_outside{
+  -webkit-animation-name: cross_outside; /* Safari 4.0 - 8.0 */
+  animation-name: cross_outside;
+  -webkit-animation-duration: 7s; /* Safari 4.0 - 8.0 */
+  animation-iteration-count: infinite;
+  -webkit-iteration-count: infinite;
+  opacity: 0.1;
+}
+@-webkit-keyframes cross_outside {
+  0%   {opacity:0.1;}
+  50%   {opacity:1;}
+  100% {opacity:0.1}
+}
+
+@keyframes cross_outside {
+  0%   {opacity:0.1;}
+  50%   {opacity:1;}
+  100% {opacity:0.1}
 }
 
 video {
@@ -256,7 +288,7 @@ video {
 }
 
 .left{
-	position: relative;
+	position: absolute;
 	left:0;
 	top:1%;
 	width:49%;
@@ -270,33 +302,53 @@ video {
 	top:1%;
 	width: 49%;
 	height: 100%;
-  display: inline-block;
 	margin: 0;
 }
-
+a{
+	text-decoration: none;
+	color:#fff;
+}
 .right, .left h1{
 	color:#fff;
-	font-size: 1.5rem;
-
+	font-size: 2rem;
+  z-index: 9;
+  cursor: pointer;
+  animation-name: move-heading;
+  -webkit-animation-name: move-heading;
+  animation-duration: 13s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
 }
+@-webkit-keyframes move-heading {
+  0%   {opacity:0;}
+  65%   {opacity:0;}
+  100% {opacity:1;}
+}
+
+/* Standard syntax */
+@keyframes move-heading {
+  0%   {opacity:0;}
+  75%   {opacity:0;}
+  100% {opacity:1;}
+}
+
+
 
 .left h1{
-	position: absolute;
-	left:25%;
-	top:65%;
-	z-index: 9;
-	cursor: pointer;
-	padding: 100px;
+  position: relative;
+	top:68%;
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0
 }
 .right h1{
-	position: absolute;
-	right:25%;
-	top:65%;
-	z-index: 9;
-	cursor: pointer;
-	padding: 100px;
-}
+  position: relative;
+	top:68%;
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0
 
+}
 .left:hover{
 	background-color: rgba(100,100,0,0.3);
 	transition: 2s;
